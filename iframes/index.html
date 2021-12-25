@@ -1,0 +1,28 @@
+---
+layout: default  
+title: iframes    
+---
+
+
+<a href="http://qavalidation.com/" target="_blank" rel="noopener noreferrer">Pavilion</a><br/><br/>
+
+<a href="http://qavalidation.com/about-me/" target="_blank" rel="noopener noreferrer">Blogger</a>
+<p id="inputtext1">Enter your name!</p><input type="text" id="input1"></input>
+<br/><br/>
+Frame1<br/><br/>
+<iframe width="200px" height="100px" id="Frame1" name="Framename1" src="about:blank"></iframe><br/><br/>
+Frame2<br/><br/>
+<iframe width="200px" height="100px" id="Frame2" src="about:blank"></iframe>
+<script type="text/javascript">
+var doc = document.getElementById('Frame1').contentWindow.document;
+doc.open();
+doc.write('<body><a href="http://google.com/" target="_blank">Category1</a><p id="frametext">I am inside Frame</p><a href="https://www.selenium.dev/" target="_blank">Category2</a></body>');
+doc.close();
+</script>
+<script type="text/javascript">
+var doc1 = document.getElementById('Frame2').contentWindow.document;
+doc1.open();
+doc1.write('<body><p id="frameinputtext">Enter something!</p><input type="text" id="frameinput"></input><a href="http://qavalidation.com/category/basicjava" target="_blank">Category3</a></body>');
+doc1.close();
+</script>
+

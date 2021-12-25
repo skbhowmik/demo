@@ -1,0 +1,51 @@
+---
+layout: default  
+title: Delay elements 
+---
+
+
+<div id="one">
+
+        <label>Click below button to display text after 5 sec</label>
+        <br>
+        <br>
+        <input class="btn" name="commit" type="button" value="Click me!" onclick="showDiv()">
+	<br>
+	<h2 id="two"></h2>
+    </div>
+    <div id="oneMore">
+    	        <label>Click below button to display button (id=delay) & text after 5 sec</label>
+ <br>
+        <br>
+        <input class="btn" name="commit1" type="button" value="Try me!" onclick="showDiv1()">
+
+	<div id="mydiv"></div>
+    </div>
+
+ 
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    
+    <script type="text/javascript">
+        function showDiv() {
+             setTimeout(function(){ 
+		     var para1 = document.getElementById('two')
+	     	     para1.innerHTML = "I am here!" ;
+		     para1.style.color = "#ff0000";
+		     }, 5000);
+        }
+        
+    </script>
+<script type="text/javascript">
+        function showDiv1() {
+        	setTimeout(function(){
+	     var para = document.createElement("h2");
+             para.id="delay"
+             para.innerHTML = "I appeared after 5 sec";
+	     para.style.color = "#ff0000";
+             document.getElementById("mydiv").appendChild(para);}, 5000);
+        }
+        
+    </script>
+            
+

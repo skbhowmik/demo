@@ -1,0 +1,64 @@
+---
+layout: default  
+title: Browser Windows  
+---
+
+<div style="text-align: center;" class="newtb"> 
+<p>Click below to open link in new tab</p>
+<a href="https://qavalidation.com/demo/" target="_blank"><input type="button" class="btn" name="NewTab" value="New Tab"/></a> 
+</div>
+
+<br/>
+
+<!--div style="text-align: center;" class="newtb"> 
+<p>Click below to open link in new browser window</p>
+<a href="JavaScript:newPopup('http://qavalidation.com/about-me/');"><input type="button" class="btn" name="NewWindow" value="New Window"/></a> 
+<script type="text/javascript">
+// Popup window code
+function newPopup(url) {
+	popupWindow = window.open(
+		url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
+</script>
+</div>
+
+<br/><br/-->
+
+<div id="multi" style="text-align: center;" >
+	<p>Click below to open multiple popups</p>
+<input type="button" class="btn" name="multiple" value="Multi Window" onclick="pop()"/>
+
+<script type="text/javascript" src='JS/jquery-1.9.0.min.js'></script>
+<script type="text/javascript">
+  function pop() {
+
+      window.open('http://qavalidation.com/about-me/'
+      	,'popUpWindow','height=400,width=500,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+
+      window.open('https://qavbox.github.io/demo/'
+      	,'_blank','height=300,width=400,left=20,top=30,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+
+  }
+</script>
+</div>
+
+<br/>
+
+<div style="text-align: center;" class="download"> 
+	<p>Click below to download a file</p>
+	<a href="https://qavalidation.com/wp-content/files/qav_test.zip" download><input class="btn" value="Download" type="button"/></a>
+</div>
+
+<br/>
+
+<p style="color:red" >Note - disable popup blocker of your borwser <br/> for multi window or download</p>
+<br/>
+
+<div style="text-align: center;" class="BrokenLinks"> 
+	<h4>Broken links</h4>
+	<br/>
+	<a href="https://qavalidation.com?page_id=5669123">broken link 404</a><br/>
+	<a href="https://the-internet.herokuapp.com/status_codes/301">broken link 301</a><br/>
+	<a href="https://the-internet.herokuapp.com/status_codes/500">broken link 500</a><br/>
+</div>
+	

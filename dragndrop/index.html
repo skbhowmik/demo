@@ -1,0 +1,54 @@
+---
+layout: default
+title: DragnDrop
+---
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+  } );
+  </script>
+
+
+
+
+<script type="text/javascript">
+  function showValue(newValue) { $("#range").html(newValue); }
+</script>
+ 
+
+<div><label>Drag & Drop </label></div>
+  <br>
+ 
+<div id="draggable" class="ui-widget-content">
+  <p>Drag me to my target</p>
+</div>
+  
+<div id="droppable" class="ui-widget-header">
+  <p id="dropText">Drop here</p>
+</div>
+    <br>
+    <br>
+    <div><label>Slider bar [range : 0 to 100, step 1]</label></div>
+ 
+
+  <br>
+  <div class="slider1">
+    <input type="range" min="0" max="100" step="1" value="0" onchange="showValue(this.value)">
+    &nbsp;
+    <span id="range">2</span>
+  </div>
+
+
